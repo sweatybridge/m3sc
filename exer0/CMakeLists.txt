@@ -1,0 +1,6 @@
+add_executable(ex0-prog1 prog_1.c)
+add_executable(ex0-prog2 prog_2.c)
+add_executable(ex0-prog3 prog_3.c)
+add_executable(ex0-prog4 prog_4.c)
+add_executable(ex0-prog5 prog_5.c)
+add_executable(ex0-prog6 prog_6.c)
