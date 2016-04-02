@@ -15,10 +15,10 @@ int main(void) {
   double b = 0.01709;
   double a = 0.2135;
 
-  double r1, r2, r3;
+  double r1, r2, r3, t, p;
   printf("%14s %14s %14s %14s %14s %14s\n", "T (Kelvin)", "P (atm)", "Vi (liters)", "V1", "V2", "V3");
-  for (double t = 40; t <= 50; t += 5) {
-    for (double p = 1; p <= 30; p += 0.5) {
+  for (t = 40; t <= 50; t += 5) {
+    for (p = 1; p <= 30; p += 0.5) {
       double a2 = - (b + r * t / p);
       double a1 = a / p;
       double a0 = - a * b / p;

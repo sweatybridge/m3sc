@@ -91,15 +91,16 @@ int main(void) {
 
   double a2, a1, a0, r1, r2;
   a2 = 1;
+  int i, j;
 
   printf("%8s %24s %24s \n", "", "Pluto (R = 1187 km)", "Charon (R = 606 km)");
   printf("%8s %12s %12s %12s %12s \n", "d (m)", "H Acc (m)", "H Trad (m)", "H Acc (m)", "H Trad (m)");
-  for (int i = 0; i < len(distance); i++) {
+  for (i = 0; i < len(distance); i++) {
     double d = distance[i];
     a0 = -d * d;
 
     printf("%8.lf ", d);
-    for (int j = 0; j < len(radius); j++) {
+    for (j = 0; j < len(radius); j++) {
       double r = radius[j];
       a1 = 2 * r;
 

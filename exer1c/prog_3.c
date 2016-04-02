@@ -6,7 +6,8 @@ int doubleEqual(double a, double b);
 int rquartic_roots(double *a, double *root);
 
 void calcPhi(double *phi, double *t) {
-  for (int i = 0; i < 4; i++) {
+  int i;
+  for (i = 0; i < 4; i++) {
     phi[i] = atan(t[i + 1]) * 2 / M_PI * 180;
   }
 }
@@ -52,8 +53,9 @@ void findH(double re, double rp, double x, double y, double *height, double *ang
 
   int num = rquartic_roots(coeff, t);
 
+  int i;
   double min = DBL_MAX;
-  for (int i = 0; i < num; i++) {
+  for (i = 0; i < num; i++) {
     double xe = re * cos(atan(t[i + 1]) * 2);
     double ye = rp * sin(atan(t[i + 1]) * 2);
     double rise = y - ye;
@@ -79,7 +81,7 @@ int main(void) {
   double x = 3. / 8;
   double y = 1. / 2;
 
-  int i;
+  int i, j;
   printf("%3s %14s %14s %14s %14s\n", "b", "t1", "t2", "t3", "t4");
   for (i = 1; i < 20; i++) {
     double b = i * 0.05;
@@ -120,7 +122,7 @@ int main(void) {
         // one repeated root
         // TODO: solve 3 phi with 3 distinct r
         printf("%.2f", b);
-        for (int j = 0; j < 4; j++) {
+        for (j = 0; j < 4; j++) {
           if (j == 0 || r[j] != r[j + 1]) {
             printf(" %14.7g\n", r[j + 1]);
           }
@@ -175,7 +177,7 @@ int main(void) {
         // one repeated root
         // TODO: solve 3 phi with 3 distinct r
         printf("%.2f", b);
-        for (int j = 0; j < 4; j++) {
+        for (j = 0; j < 4; j++) {
           if (j == 0 || r[j] != r[j + 1]) {
             printf(" %14.7g\n", phi[j]);
           }

@@ -134,7 +134,8 @@ int rcubic_roots(double complex *a, double complex *r) {
       } else {
         // use Newton-Raphson method
         double complex y = 1.0 + 1.0 * I;
-        for (int n = 0; n < 10000; n++) {
+        int n;
+        for (n = 0; n < 10000; n++) {
           // y_next = y - f(y) / f'(y), simplified
           double complex y_next = 2 * y / 3 + (2 * p * y + 3) / (9 * y * y - 3 * p);
           if (cabs(y_next - y) < DBL_EPSILON) {
@@ -220,7 +221,8 @@ int main(void) {
   double complex r[4];
   double complex d[5];
   double complex s;
-  for (int j = 0; j <= 80; j++) {
+  int j;
+  for (j = 0; j <= 80; j++) {
     double real = cos(j / 80. * M_PI);
     double imag = sin(j / 80. * M_PI);
     s = (fabs(real) < 2 * DBL_EPSILON ? 0 : real) + (fabs(imag) < 2 * DBL_EPSILON ? 0 : imag) * I;

@@ -78,7 +78,8 @@ int main(void) {
   printf("%20s: DOC\n", "Course Code");
 
   printf("%6s %14s %14s %14s %14s\n", "j", "Re(Wj+)", "Im(Wj+)", "Re(Wj-)", "Im(Wj-)");
-  for (int j = 0; j <= 80; j++) {
+  int j;
+  for (j = 0; j <= 80; j++) {
     double complex z, r1, r2;
     double real = cos(j / 40.0 * M_PI);
     double imag = sin(j / 40.0 * M_PI);
