@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main(void) {
+int main() {
   double a1, a0;
 
   printf("Enter coefficients of Linear Equation a1*x+a0=0 \n");

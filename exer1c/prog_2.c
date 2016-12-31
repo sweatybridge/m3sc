@@ -2,7 +2,7 @@
 
 int rquartic_roots(double *a, double *root);
 
-int main(void) {
+int main() {
   double a[] = {210, -47, -39, 3};
   double r[5];
 

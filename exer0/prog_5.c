@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main(void) {
+int main() {
   int high = 160;
   int step = 2;
   int C = -40;

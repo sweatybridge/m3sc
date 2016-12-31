@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main(void) {
+int main() {
   short i1 = 44;
   short i2 = 55;
   short i3;

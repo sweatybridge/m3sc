@@ -7,7 +7,7 @@ extern long add_sub_count, div_count, mul_count;
 
 double *BGauss(double **C, double *y, int N, int B);
 
-int main(void) {
+int main() {
   double A0[] = {0, 0, 0, 0};
   double A1[] = {0, 0, -2, 1};
   double A2[] = {0, 1, -2, 1};

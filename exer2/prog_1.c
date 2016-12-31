@@ -7,7 +7,7 @@ extern long add_sub_count, div_count, mul_count;
 
 double *Gauss(double **A, double *y, int N);
 
-int main(void) {
+int main() {
   double A0[] = {0, 0, 0, 0};
   double A1[] = {0, -2, 1, 0};
   double A2[] = {0, 1, -2, 1};

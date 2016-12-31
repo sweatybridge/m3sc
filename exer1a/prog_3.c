@@ -129,7 +129,7 @@ int quad_roots(double a2, double a1, double a0, double *r1, double *r2) {
   return discriminant < 0 ? 0 : 2;
 }
 
-int main(void) {
+int main() {
   double a2, a1, a0, r1, r2;
 
   printf("Enter coefficients of Quadratic Equation a2*x^2+a1*x+a0=0 \n");

@@ -125,7 +125,7 @@ int rcubic_roots(double complex a2,
   return countDistinct(r1, r2, r3);
 }
 
-int main(void) {
+int main() {
   // z3 + c2z2 + c1z + c0 = 0
   double complex c2, c1, c0, r1, r2, r3, s;
   int j;

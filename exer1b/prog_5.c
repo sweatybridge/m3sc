@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main(void) {
+int main() {
   printf("\n What is this? : \234 ");
 //  printf("\n What is this? : \u20AC ");
   printf("\n What is this? : %s ", __TIME__);

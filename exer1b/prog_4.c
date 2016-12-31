@@ -2,7 +2,7 @@
 
 int rcubic_roots(double a2, double a1, double a0, double *r1, double *r2, double *r3);
 
-int main(void) {
+int main() {
   double r = 0.0820578;
   double b = 0.01709;
   double a = 0.2135;

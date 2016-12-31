@@ -205,7 +205,7 @@ int rquartic_roots(double complex *a, double complex *r) {
   return countReal(r);
 }
 
-int main(void) {
+int main() {
   printf("%6s %14s %14s %14s %14s\n", "j", "Re(z1)", "Im(z1)", "Re(z2)", "Im(z2)");
   printf("%6s %14s %14s %14s %14s\n", "j", "Re(z3)", "Im(z3)", "Re(z4)", "Im(z4)");
   // z4 + c3z3 + c2z2 + c1z + c0 = 0

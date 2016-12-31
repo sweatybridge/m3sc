@@ -70,7 +70,7 @@ int quad_roots(double complex a2, double complex a1, double complex a0, double c
   return 2;
 }
 
-int main(void) {
+int main() {
   printf("%6s %14s %14s %14s %14s\n", "j", "Re(Wj+)", "Im(Wj+)", "Re(Wj-)", "Im(Wj-)");
   int j;
   for (j = 0; j <= 80; j++) {

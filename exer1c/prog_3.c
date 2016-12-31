@@ -69,7 +69,7 @@ void findH(double re, double rp, double x, double y, double *height, double *ang
   }
 }
 
-int main(void) {
+int main() {
   double x = 3. / 8;
   double y = 1. / 2;
 

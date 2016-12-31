@@ -191,7 +191,7 @@ Result solvePoisson(int N, int skipGauss) {
   return result;
 }
 
-int main(void) {
+int main() {
   // print table header
   printf("%12s %17s %17s %17s %17s %12s %12s %12s %12s\n",
          "N",

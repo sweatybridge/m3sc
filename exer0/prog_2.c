@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main(void) {
+int main() {
   int i1 = 4;
   int i2 = 11111;
   int i3 = 777777777;

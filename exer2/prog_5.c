@@ -124,7 +124,7 @@ Result solvePoisson(int N, int skipGauss) {
   return result;
 }
 
-int main(void) {
+int main() {
   printf("%12s %17s %17s %17s %17s %12s %12s %12s %12s\n",
          "N",
          "Max Phi_r",

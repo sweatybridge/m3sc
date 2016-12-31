@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main(void) {
+int main() {
   float x1 = 1.0e6;
   float x2 = 2.4048255576957728;
   float x3;

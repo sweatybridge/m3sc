@@ -4,7 +4,7 @@ int lin_root(double *, double *);
 int quad_roots(double *, double *);
 int rcubic_roots(double *, double *);
 
-int main(void) {
+int main() {
   int num_roots;
 
   printf("\n*** Testing lin_root ***\n");

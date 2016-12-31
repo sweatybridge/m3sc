@@ -78,7 +78,7 @@ int quad_roots_accurate(double a2, double a1, double a0, double *r1, double *r2)
   return num_roots;
 }
 
-int main(void) {
+int main() {
   // http://nssdc.gsfc.nasa.gov/planetary/factsheet/plutofact.html
   double radius[] = {1187000, 606000};
   double distance[] = {1, 100, 1000, 100000};
