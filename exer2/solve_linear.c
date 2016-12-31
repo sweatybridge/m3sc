@@ -8,7 +8,6 @@ unsigned long long div_count, mul_count, add_sub_count;
 #endif
 
 double *copy(double *y, int N) {
-  /* Han, Qiao: 00729653 */
   double *x = malloc((N + 1) * sizeof(double));
   int i;
   for (i = 1; i <= N; i++) {
@@ -18,7 +17,6 @@ double *copy(double *y, int N) {
 }
 
 double *Gauss(double **A, double *y, int N) {
-  /* Han, Qiao: 00729653 */
 #ifdef INSTRUMENT
   div_count = 0, mul_count = 0, add_sub_count = 0;
 #endif
@@ -78,7 +76,6 @@ double *Gauss(double **A, double *y, int N) {
 }
 
 void luDecompose(double **a, int m, int n) {
-  /* Han, Qiao: 00729653 */
   int g, h, i, j, k;
   int r = (m + 1) / 2;
 
@@ -129,7 +126,6 @@ void luDecompose(double **a, int m, int n) {
 }
 
 void solve(double **a, double *b, int m, int n) {
-  /* Han, Qiao: 00729653 */
   int i, j, k;
   int r = (m + 1) / 2;
 
@@ -182,7 +178,6 @@ void solve(double **a, double *b, int m, int n) {
 }
 
 double *BGauss(double **C, double *y, int N, int B) {
-  /* Han, Qiao: 00729653 */
 #ifdef INSTRUMENT
   div_count = 0, mul_count = 0, add_sub_count = 0;
 #endif

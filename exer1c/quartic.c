@@ -111,22 +111,7 @@ int rquartic_roots(double *a, double *root) {
     b[0] = 4 * a[0] * a[2] - a[1] * a[1] - a[0] * a[3] * a[3];
 
     rcubic_roots(b, root);
-//    if (num_roots == 2) {
-//      // (x - r)^2 (x^2 + bx + c)
-//      b[0] = a[0] / root[2];
-//      b[1] = a[3] + 2 * sqrt(root[2]);
-//      b[2] = 1.0;
-//      root[1] = sqrt(root[2]);
-//      root[2] = root[1];
-//      num_roots = quad_roots(b, root + 2);
-//      if (num_roots == 0) {
-//        // complex roots
-//        return 2;
-//      } else {
-//        bubbleSort(root + 1, 4);
-//        return countReal(root);
-//      }
-//    }
+    // TODO: special case when num_roots == 2
 
     double p[3], q[3];
 

@@ -20,6 +20,37 @@ typedef struct {
   unsigned long long total_inst_bgauss;
 } Result;
 
+void printContour(double **phi, int N) {
+  double delta = 1. / N;
+
+  // header
+  for (int i = 0; i < 33; ++i) {
+    printf("%.4lf %.4lf %.4lf\n", 0., i / (double) 32, 0.);
+  }
+  printf("\n");
+
+  // body
+  for (int i = 1; i < N; ++i) {
+    if (i % (N / 32) == 0) {
+      printf("%.4lf %.4lf %.4lf\n", delta * i, 0., 0.);
+    }
+    for (int j = 1; j < N; ++j) {
+      if (i % (N / 32) == 0 && j % (N / 32) == 0) {
+        printf("%.4lf %.4lf %.4lf\n", delta * i, delta * j, phi[i][j]);
+      }
+    }
+    if (i % (N / 32) == 0) {
+      printf("%.4lf %.4lf %.4lf\n", delta * i, 1., 0.);
+      printf("\n");
+    }
+  }
+
+  // footer
+  for (int i = 0; i < 33; ++i) {
+    printf("%.4lf %.4lf %.4lf\n", 1., i / (double) 32, 0.);
+  }
+}
+
 double p(double x, double y, int isSmooth) {
   if (isSmooth) {
     if ((x == 0.25 && y == 0.25) ||
@@ -85,17 +116,9 @@ Result solvePoisson(int N, int skipGauss) {
     result.total_inst_bgauss += add_sub_count + div_count + mul_count;
 #endif
 
-    // find max and print
-//    printf("\n");
 //#pragma omp parallel for collapse(2) schedule(static) reduction(max: max_phi)
     for (j = 1; j < N; j++) {
-//      if (j % (N / 32) == 0) {
-//        printf("%.4lf %.4lf %.4lf\n", delta * j, 0., 0.);
-//      }
       for (jj = 1; jj < N; jj++) {
-//        if (j % (N / 32) == 0 && jj % (N / 32) == 0) {
-//          printf("%.4lf %.4lf %.4lf\n", delta * j, delta * jj, phi[(j - 1) * (N - 1) + jj]);
-//        }
         if (result.max_phi[k] > phi[(j - 1) * (N - 1) + jj]) {
           continue;
         }
@@ -103,12 +126,7 @@ Result solvePoisson(int N, int skipGauss) {
         result.max_x[k] = delta * j;
         result.max_y[k] = delta * jj;
       }
-//      if (j % (N / 32) == 0) {
-//        printf("%.4lf %.4lf %.4lf\n", delta * j, 1., 0.);
-//        printf("\n");
-//      }
     }
-//    printf("\n");
 
     free(A[0]);
     free(phi);
@@ -174,15 +192,6 @@ Result solvePoisson(int N, int skipGauss) {
 }
 
 int main(void) {
-  /* Han, Qiao: 00729653 */
-  printf("%20s: Han, Qiao\n", "Name");
-  printf("%20s: 00729653\n", "CID");
-  printf("%20s: 0246473100\n", "LIBRARY NO");
-  printf("%20s: qh812@imperial.ac.uk\n", "Email Address");
-  printf("%20s: DOC\n", "Course Code");
-  printf("%20s: %s\n", "Time", __TIME__);
-  printf("%20s: %s\n", "Date", __DATE__);
-
   // print table header
   printf("%12s %17s %17s %17s %17s %17s %17s %12s %12s %12s %12s\n",
          "N",

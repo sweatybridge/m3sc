@@ -71,12 +71,6 @@ int quad_roots(double complex a2, double complex a1, double complex a0, double c
 }
 
 int main(void) {
-  printf("%20s: Han, Qiao\n", "Name");
-  printf("%20s: 00729653\n", "CID");
-  printf("%20s: 0246473100\n", "LIBRARY NO");
-  printf("%20s: qh812@imperial.ac.uk\n", "Email Address");
-  printf("%20s: DOC\n", "Course Code");
-
   printf("%6s %14s %14s %14s %14s\n", "j", "Re(Wj+)", "Im(Wj+)", "Re(Wj-)", "Im(Wj-)");
   int j;
   for (j = 0; j <= 80; j++) {

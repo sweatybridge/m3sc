@@ -8,15 +8,6 @@ extern long add_sub_count, div_count, mul_count;
 double *Gauss(double **A, double *y, int N);
 
 int main(void) {
-  /* Han, Qiao: 00729653 */
-  printf("%20s: Han, Qiao\n", "Name");
-  printf("%20s: 00729653\n", "CID");
-  printf("%20s: 0246473100\n", "LIBRARY NO");
-  printf("%20s: qh812@imperial.ac.uk\n", "Email Address");
-  printf("%20s: DOC\n", "Course Code");
-  printf("%20s: %s\n", "Time", __TIME__);
-  printf("%20s: %s\n", "Date", __DATE__);
-
   double A0[] = {0, 0, 0, 0};
   double A1[] = {0, -2, 1, 0};
   double A2[] = {0, 1, -2, 1};

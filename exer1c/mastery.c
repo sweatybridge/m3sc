@@ -206,14 +206,6 @@ int rquartic_roots(double complex *a, double complex *r) {
 }
 
 int main(void) {
-  printf("%20s: Han, Qiao\n", "Name");
-  printf("%20s: 00729653\n", "CID");
-  printf("%20s: 0246473100\n", "LIBRARY NO");
-  printf("%20s: qh812@imperial.ac.uk\n", "Email Address");
-  printf("%20s: DOC\n", "Course Code");
-  printf("%20s: %s\n", "Time", __TIME__);
-  printf("%20s: %s\n", "Date", __DATE__);
-
   printf("%6s %14s %14s %14s %14s\n", "j", "Re(z1)", "Im(z1)", "Re(z2)", "Im(z2)");
   printf("%6s %14s %14s %14s %14s\n", "j", "Re(z3)", "Im(z3)", "Re(z4)", "Im(z4)");
   // z4 + c3z3 + c2z2 + c1z + c0 = 0

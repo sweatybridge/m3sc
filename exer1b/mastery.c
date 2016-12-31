@@ -126,14 +126,6 @@ int rcubic_roots(double complex a2,
 }
 
 int main(void) {
-  printf("%20s: Han, Qiao\n", "Name");
-  printf("%20s: 00729653\n", "CID");
-  printf("%20s: 0246473100\n", "LIBRARY NO");
-  printf("%20s: qh812@imperial.ac.uk\n", "Email Address");
-  printf("%20s: DOC\n", "Course Code");
-  printf("%20s: %s\n", "Time", __TIME__);
-  printf("%20s: %s\n", "Date", __DATE__);
-
   // z3 + c2z2 + c1z + c0 = 0
   double complex c2, c1, c0, r1, r2, r3, s;
   int j;
@@ -148,13 +140,6 @@ int main(void) {
     c2 = -(8 * s + 4) / (3 * s - 1);
 
     int num_roots = rcubic_roots(c2, c1, c0, &r1, &r2, &r3);
-//    printf("%6d %14.7g %14.7g %14.7g %14.7g %14.7g %14.7g\n", j,
-//           creal(c2),
-//           cimag(c2),
-//           creal(c1),
-//           cimag(c1),
-//           creal(c0),
-//           cimag(c0));
 
     printf("%6d", j);
     switch (num_roots) {

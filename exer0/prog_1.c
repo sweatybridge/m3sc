@@ -14,6 +14,8 @@ int main(void) {
   printf("%20s: 0246473100\n", "LIBRARY NO");
   printf("%20s: qh812@imperial.ac.uk\n", "Email Address");
   printf("%20s: DOC\n", "Course Code");
+  printf("%20s: %s\n", "Time", __TIME__);
+  printf("%20s: %s\n", "Date", __DATE__);
 
   return 0;
 }
