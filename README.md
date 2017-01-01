@@ -1,6 +1,6 @@
-# m3sc
-Scientific Computation coursework implemented in C with tests written in C++ using [gTest](https://github.com/google/googletest).
-This project is now open source because the original course is no longer run at Imperial College London (it's using Python in the future).
+# Scientific Computation
+M3SC coursework implemented in C with tests written in C++ using [gTest](https://github.com/google/googletest).
+This project is now open source because the original course is no longer being taught at Imperial College London (it's replaced by a similar course that uses Python).
 
 ```
 m3sc
@@ -40,7 +40,7 @@ m3sc
 │   ├── prog_4.c     // demo program for dst.c for N = 2^n and N = 3 * 2^n (with timing)
 │   ├── prog_5.c     // using dst.c to solve finite difference approxmiation to Poisson's equation (2D)
 │   └── mastery.c    // dst.c for N = 5 * 2^n
-└── tests            // depends on gtest
+└── tests            // all tests depend on gtest
 ```
 ## Build
 ```
